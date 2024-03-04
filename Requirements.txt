@@ -1,0 +1,2 @@
+Pillow
+auto-py-to-exe

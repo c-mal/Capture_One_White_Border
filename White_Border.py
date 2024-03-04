@@ -1,4 +1,4 @@
-from PIL import Image, ImageOps
+from PIL import Image
 import sys
 
 def add_white_border(image_path):
