@@ -1,5 +1,6 @@
 from PIL import Image
 import sys
+from tkinter import filedialog
 
 def add_white_border(image_path):
     print("Input image:", image_path)
@@ -44,10 +45,13 @@ def add_white_border(image_path):
 if __name__ == "__main__":
     # Check if an image path is provided as a command line argument
     if len(sys.argv) != 2:
-        print("Usage: python add_white_border.py <input_image_path>")
-        sys.exit(1)
+        print("Select image to add borders to.")
+        image_path = filedialog.askopenfile()
 
-    image_path = sys.argv[1]
+    try:
+        image_path = sys.argv[1]
+    except:
+        print("Image processing failed, ensure that image type is compatible and that correct image path is provided.")
 
     # Add white border to the image
     add_white_border(image_path)
